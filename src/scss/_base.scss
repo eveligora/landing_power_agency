@@ -69,9 +69,31 @@ footer {
 	font-size: 5rem;
 
 	text-align: center;
-	// p {
-	// 	color: $color_black;
-	// }
+
+	& > strong {
+		background-color: aqua;
+	}
+
+	& p {
+		color: $color_black;
+	}
+
+	&.some_class {
+		color: red;
+	}
+	&::after,
+	&::before {
+		position: absolute;
+	}
+	& h2 {
+		font-size: 52px;
+	}
+}
+
+h2 {
+	.hello & {
+		font-size: 60px;
+	}
 }
 
 /* remove */
