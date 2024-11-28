@@ -33,10 +33,18 @@ body {
 }
 
 .section {
+	position: relative;
 	width: 100%;
 	padding: 10rem 0;
 	&.section--bg {
 		background-color: $color_bg_2;
+	}
+
+	&.section__decor {
+		&::after,
+		&::before {
+			
+		}
 	}
 }
 
