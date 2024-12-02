@@ -12,12 +12,12 @@
 	&::before {
 		position: absolute;
 		top: -5rem;
-		
+
 		content: '';
-		
+
 		width: 5.6rem;
 		height: 5rem;
-		
+
 		background-image: url(../imgs/quote.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -92,6 +92,7 @@
 		box-shadow: 0 0 0 0.5rem $color_accent;
 	}
 	.swiper-slide:not(.swiper-slide-thumb-active) & {
+		filter: blur(0.6px);
 		height: 7.8rem;
 		width: 7.8rem;
 	}
