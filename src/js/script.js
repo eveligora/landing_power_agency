@@ -1,7 +1,6 @@
 const swiperTwo = new Swiper('.swiper_2', {
 	slidesPerView: 5,
 	loop: true,
-
 });
 
 const swiperOne = new Swiper('.swiper_1', {
@@ -11,3 +10,11 @@ const swiperOne = new Swiper('.swiper_1', {
 	},
 });
 
+const swiperTree = new Swiper('.swiper_3', {
+	slidesPerView: 5,
+	loop: true,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: true,
+	},
+});
