@@ -39,13 +39,6 @@ body {
 	&.section--bg {
 		background-color: $color_bg_2;
 	}
-
-	&.section__decor {
-		&::after,
-		&::before {
-			
-		}
-	}
 }
 
 .section__title {
@@ -57,6 +50,12 @@ body {
 	&.section__title--centr {
 		text-align: center;
 	}
+}
+
+.section__descr {
+	font-size: 2rem;
+	line-height: 1.8;
+	color: $color_text;
 }
 
 .container {
