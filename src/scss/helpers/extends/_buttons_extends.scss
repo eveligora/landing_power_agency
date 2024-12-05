@@ -19,6 +19,7 @@
 	color: $color_white;
 	background-color: $color_accent;
 	transition: 0.3s ease;
+	text-decoration: none;
 
 	&:hover {
 		background-color: rgba($color_accent, 80%);
