@@ -67,6 +67,7 @@ body {
 
 	margin: 0 auto;
 }
+
 .top_button {
 	left: 100%;
 	bottom: 0;
@@ -81,6 +82,14 @@ body {
 	border-radius: 50%;
 	background-color: $color_accent;
 	cursor: pointer;
+
+	// @include bp(1024px) {
+	// 	background-color: tomato;
+	// }
+
+	// @include bp(1023px, min) {
+	// 	background-color: $color_accent;
+	// } All first
 }
 
 .top_button__svg {
@@ -91,3 +100,15 @@ body {
 	object-position: center;
 	color: $color_white;
 }
+
+// @media screen and (max-width: 1023px) {
+// 	.top_button {
+// 		background-color: tomato;
+// 	}
+// } desktop first
+
+// @media screen and (min-width: 1024px) {
+// 	.top_button {
+// 		background-color: tomato;
+// 	}
+// } mobile first
