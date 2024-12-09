@@ -19,6 +19,12 @@
 .header__nav {
 	display: flex;
 	column-gap: 4.4rem;
+
+	
+	@include bp($point_3) {
+		display: none;
+	}
+	
 }
 
 .header__nav_link {
