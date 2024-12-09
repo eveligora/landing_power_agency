@@ -3,20 +3,42 @@
 	display: flex;
 	column-gap: 6rem;
 	align-items: center;
+
+	@include bp($point_3) {
+		flex-direction: column-reverse;
+		row-gap: 4rem;
+	}
 }
 
 .hero__info_wrap {
-	display: block;
-	max-width: 60%;
-	flex-shrink: 0;
+	@include bp($point_2, min) {
+		display: block;
+		max-width: 60%;
+		flex-shrink: 0;
+	}
+
+	@include bp($point_3) {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .hero__title {
 	margin-bottom: 4.2rem;
-	font-size: 6rem;
+
 	font-weight: 700;
 	line-height: 1.83;
 	color: $color_title;
+
+	@include bp($point_2, min) {
+		font-size: 6rem;
+	}
+
+	@include bp($point_3) {
+		font-size: 3.6rem;
+	}
 
 	strong {
 		position: relative;
@@ -66,6 +88,12 @@
 .hero__btns {
 	display: flex;
 	column-gap: 3.4rem;
+
+	@include bp($point_3) {
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 3rem;
+	}
 }
 
 .btn_watch {
@@ -115,6 +143,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+
+	@include bp($point_5) {
+		overflow: hidden;
+		max-width: 100%;
+	}
 }
 
 .hero_picture {
@@ -124,16 +157,35 @@
 	height: 40rem;
 	width: 40rem;
 	border: 1rem solid $color_accent;
-	border-radius: 50%;
+
 	background-color: rgba(112, 111, 229, 0.15);
+
+	@include bp($point_4, min) {
+		border-radius: 50%;
+	}
+
+	@include bp($point_5) {
+		max-width: 100%;
+	}
 }
 
 .hero_picture__in {
 	position: absolute;
-	bottom: 5rem;
+
 
 	height: 46rem;
 	width: 46rem;
+
+	
+	@include bp($point_4, min) {
+		bottom: 5rem;
+	}
+
+	@include bp($point_5) {
+		bottom: -6rem;
+		max-width: 100%;
+	}
+	
 }
 
 .hero_picture__img {
@@ -141,21 +193,27 @@
 }
 
 .hero_employees {
-	position: absolute;
-	bottom: -3.6rem;
+	@include bp($point_4, min) {
+		position: absolute;
+		bottom: -3.6rem;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 24rem;
-	min-height: 13.2rem;
-	padding: 1.4rem 2.6rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 24rem;
+		min-height: 13.2rem;
+		padding: 1.4rem 2.6rem;
 
-	box-shadow: 0 0.6rem 2rem 0px rgba(0, 0, 0, 0.1);
-	border-radius: 1rem;
-	background-color: $color_white;
+		box-shadow: 0 0.6rem 2rem 0px rgba(0, 0, 0, 0.1);
+		border-radius: 1rem;
+		background-color: $color_white;
 
-	overflow: hidden;
+		overflow: hidden;
+	}
+
+	@include bp($point_5) {
+		display: none;
+	}
 }
 
 .hero_employees__photos {
@@ -213,35 +271,40 @@
 }
 
 .hero__decor {
-	position: absolute;
+	@include bp($point_2, min) {
+		position: absolute;
 
-	&.hero__decor--1 {
-		top: 0;
-		left: 0;
-		width: 4.8rem;
-		height: 4.8rem;
-	}
-	&.hero__decor--2 {
-		top: 0;
-		left: 0;
-		width: 7rem;
-		height: 7rem;
-	}
-	&.hero__decor--3 {
-		top: -7.4rem;
-		right: -5.8rem;
-		width: 12.4rem;
-		height: 12.4rem;
-	}
+		&.hero__decor--1 {
+			top: -12rem;
+			left: -8.2rem;
+			width: 4.8rem;
+			height: 4.8rem;
+		}
+		&.hero__decor--2 {
+			top: -7.4rem;
+			left: -1.4rem;
+			width: 7rem;
+			height: 7rem;
+		}
+		&.hero__decor--3 {
+			top: -7.4rem;
+			right: -5.8rem;
+			width: 12.4rem;
+			height: 12.4rem;
+		}
 
-	&.hero__decor--4 {
-		bottom: -8.4rem;
-		right: 2.4rem;
+		&.hero__decor--4 {
+			bottom: -8.4rem;
+			right: 2.4rem;
 
-		width: 8.4rem;
-		height: 8.4rem;
-		background-color: $color_accent;
-		border-radius: 50%;
+			width: 8.4rem;
+			height: 8.4rem;
+			background-color: $color_accent;
+			border-radius: 50%;
+		}
+	}
+	@include bp($point_3) {
+		display: none;
 	}
 }
 
