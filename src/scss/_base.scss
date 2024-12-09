@@ -12,7 +12,7 @@ body {
 	height: 100%;
 
 	font-weight: 400;
-	// scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -66,4 +66,28 @@ body {
 	padding: 0 2rem;
 
 	margin: 0 auto;
+}
+.top_button {
+	left: 100%;
+	bottom: 0;
+	position: sticky;
+
+	translate: -2rem -2rem;
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: $color_accent;
+	cursor: pointer;
+}
+
+.top_button__svg {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	object-fit: contain;
+	object-position: center;
+	color: $color_white;
 }
